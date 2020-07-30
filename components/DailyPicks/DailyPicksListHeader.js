@@ -12,15 +12,14 @@ const DailyPicksListHeader = () => {
 
 const styles = StyleSheet.create({
     listHeader: {
-        width: 91,
-        height: 27,
+        textShadowColor: "#686868",
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 2,
         // Webkit-textStroke: "solid 1 #686868",
         color: "#0f4c75",
-        // fontFamily: "Spectral SC",
-        fontSize: 18,
-        fontWeight: "400",
+        fontFamily: "SpectralSC_400Regular",
+        fontSize: 24,
         lineHeight: 27,
-        textAlign: "center",
         marginHorizontal: 10
     }
 });

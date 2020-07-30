@@ -6,10 +6,9 @@ import DailyPicksCell from './DailyPicksCell';
 const DailyPicks = () => {
     return (
         <View style={styles.container}>
+            <DailyPicksListHeader />
             <FlatList
             data={[0,0,0]} 
-            ListHeaderComponent={()=> <DailyPicksListHeader />}
-            stickyHeaderIndices={[0]}
             renderItem={({item})=><DailyPicksCell />}
             />
         </View>

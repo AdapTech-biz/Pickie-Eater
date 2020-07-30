@@ -1,11 +1,14 @@
 import React from 'react';
-import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, View, Text, StyleSheet, ImageBackground} from 'react-native';
 
 const SearchButton = () => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Eat</Text>
+            <TouchableOpacity style={{alignItems: 'center', justifyContent: 'center'}} >
+            <ImageBackground imageStyle={{resizeMode:"contain"}}  style={styles.button} source={require('../assets/searchButton/Ellipse.png')}>
+                <Text style={styles.buttonText}>Eat</Text>
+            </ImageBackground>
+            
             </TouchableOpacity>
         </View>
         
@@ -16,26 +19,30 @@ const styles = StyleSheet.create({
     container: {
         flex: 3,
         justifyContent: "center",
-        alignSelf: "center"
+        alignSelf: "center",
+        
     },
     button: {
-        width: 250,
-        height: 250,
+        width: 300,
+        resizeMode: 'cover',
         alignSelf: "center",
         justifyContent: "center",
-        backgroundColor: '#1B262C',
-        borderRadius: 150,
-        backgroundColor: "#3282B8"
+        overflow: 'visible',
+        aspectRatio: 1
+        // backgroundColor: '#1B262C',
+        // borderRadius: 150,
+        // backgroundColor: "#3282B8",
+        
     },
     buttonText: {
         alignSelf: "center",
-        width: 120,
-        height: 59,
-        // textShadow: "0 2 4 rgba(100,100,100,0.5)",
+        width: "100%",
+        textShadowColor: "rgba(100,100,100,0.5)",
+        textShadowOffset: {width: 1, height: 5},
+        textShadowRadius: 4,
         color: "#f9fcfb",
-        // fontFamily: "Spectral SC",
-        fontSize: 36,
-        fontWeight: "400",
+        fontFamily: "SpectralSC_400Regular",
+        fontSize: 40,
         lineHeight: 55,
         textAlign: "center",
     }
